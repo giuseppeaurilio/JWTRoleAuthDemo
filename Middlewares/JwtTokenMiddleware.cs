@@ -17,6 +17,7 @@ namespace JwtTokenDemo.Middlewares
         public JwtTokenMiddleware(RequestDelegate next)
         {
             this.next = next;
+
         }
         public async Task Invoke(HttpContext context)
         {
