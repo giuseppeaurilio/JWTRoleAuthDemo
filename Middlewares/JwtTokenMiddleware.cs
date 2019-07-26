@@ -1,12 +1,11 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Primitives;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Primitives;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace JwtTokenDemo.Middlewares
 {
@@ -25,6 +24,8 @@ namespace JwtTokenDemo.Middlewares
             //emettiamo il token nell'intestazione intestazione X-Token.
             //L'intestazione potrebbe avere un altro nome, l'importante è che
             //sia documentata ai client che useranno la nostra API
+            //Ogni richiesta viene generato un nuovo token con validità 20 minuti. 
+            //Il client deve decidere se quando sostituire il client chiamante.
             context.Response.OnStarting(() =>
             {
                 var identity = context.User.Identity as ClaimsIdentity;
@@ -45,20 +46,12 @@ namespace JwtTokenDemo.Middlewares
             var token = new JwtSecurityToken(issuer: "Issuer",
                                              audience: "Audience",
                                              claims: identity.Claims,
-                                             expires: DateTime.Now.AddMinutes(2),
+                                             expires: DateTime.Now.AddMinutes(20),
                                              signingCredentials: credentials
                                              );
             var tokenHandler = new JwtSecurityTokenHandler();
             var serializedToken = tokenHandler.WriteToken(token);
             return serializedToken;
-        }
-
-        public ClaimsIdentity CreateIdentity(string username)
-        {
-            var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
-            AuthorizedUser currUser = new AuthorizedUser(username);
-
-            return identity;
         }
     }
 }

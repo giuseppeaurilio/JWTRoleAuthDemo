@@ -18,7 +18,7 @@ namespace JwtTokenDemo.Controllers
                 return BadRequest();
             }
 
-            if (!VerifyCredentials(tokenRequest.Username, tokenRequest.Password))
+            if (!AuthorizedUser.VerifyCredentials(tokenRequest.Username, tokenRequest.Password))
             {
                 return Unauthorized();
             }
@@ -35,13 +35,5 @@ namespace JwtTokenDemo.Controllers
             //Non restituiamo nulla. Il token verrà prodotto dal JwtTokenMiddleware
             return NoContent();
         }
-
-        private bool VerifyCredentials(string username, string password)
-        {
-            //Vediamo se le credenziali fornite sono valide
-            AuthorizedUser currUser = new AuthorizedUser(username, password);
-            return currUser.Authorized;
-        }
-
     }
 }

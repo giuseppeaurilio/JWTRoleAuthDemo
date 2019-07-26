@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.1\JwtTokenDemo.deps.json
+C:\Users\user\source\repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.1\JwtTokenDemo.runtimeconfig.json
+C:\Users\user\source\repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.1\JwtTokenDemo.runtimeconfig.dev.json
+C:\Users\user\source\repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.1\JwtTokenDemo.dll
+C:\Users\user\source\repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.1\JwtTokenDemo.pdb
+C:\Users\user\source\repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.1\JwtTokenDemo.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.1\JwtTokenDemo.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.1\JwtTokenDemo.AssemblyInfo.cs
+C:\Users\user\source\repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.1\JwtTokenDemo.dll
+C:\Users\user\source\repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.1\JwtTokenDemo.pdb

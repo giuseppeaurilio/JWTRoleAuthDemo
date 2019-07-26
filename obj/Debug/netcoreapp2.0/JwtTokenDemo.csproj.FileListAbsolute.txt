@@ -19,3 +19,14 @@ C:\Users\G.Aurilio\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtToken
 C:\Users\G.Aurilio\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.AssemblyInfo.cs
 C:\Users\G.Aurilio\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.dll
 C:\Users\G.Aurilio\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.pdb
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.0\JwtTokenDemo.deps.json
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.0\JwtTokenDemo.runtimeconfig.json
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.0\JwtTokenDemo.runtimeconfig.dev.json
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.0\JwtTokenDemo.dll
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\bin\Debug\netcoreapp2.0\JwtTokenDemo.pdb
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.AssemblyInfo.cs
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.dll
+C:\Users\user\Source\Repos\JWTRoleAuthDemo\obj\Debug\netcoreapp2.0\JwtTokenDemo.pdb

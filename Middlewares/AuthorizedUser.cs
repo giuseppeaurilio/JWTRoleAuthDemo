@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace JwtTokenDemo.Middlewares
 {
@@ -22,24 +20,52 @@ namespace JwtTokenDemo.Middlewares
         {
             if (username == "Admin" && password == "Password")
             {
-                this.Authorized = true;
-                this.Username = username;
-                this.PageActionsList = new List<PageAction>();
-                this.PageActionsList.Add(new PageAction() { Route = "UserDataController.Get" });
+                AuthorizedUser user = CreateMock();
+                this.Authorized = user.Authorized;
+                this.Username = user.Username;
+                this.PageActionsList = user.PageActionsList;
             }
         }
 
         public AuthorizedUser(string username)
         {
-            this.Authorized = true;
-            this.Username = username;
-            this.PageActionsList = new List<PageAction>();
-            this.PageActionsList.Add(new PageAction() { Route = "UserDataController.Get" });
+            AuthorizedUser user = CreateMock();
+            this.Authorized = user.Authorized;
+            this.Username = user.Username;
+            this.PageActionsList = user.PageActionsList;
+        }
+
+        public static bool VerifyCredentials(string username, string password)
+        {
+            //Vediamo se le credenziali fornite sono valide
+            AuthorizedUser currUser = new AuthorizedUser(username, password);
+            return currUser.Authorized;
+        }
+
+        public static bool canExecute(string username, string controller, string action)
+        {
+            bool ret = false;
+            AuthorizedUser curreUser = new AuthorizedUser(username);
+            if (curreUser.PageActionsList.Any(p => p.Controller == controller && p.Action == action))
+                ret = true;
+            return ret;
+        }
+
+        private static AuthorizedUser CreateMock()
+        {
+            return new AuthorizedUser()
+            {
+                Authorized = true,
+                Username = "Admin",
+                PageActionsList = new List<PageAction>() { new PageAction() { Controller = "UserData", Action = "Get" } }
+            };
         }
     }
-
-    public class PageAction
-    {
-        public string Route { get; set; }
-    }
 }
+
+public class PageAction
+{
+    public string Controller { get; set; }
+    public string Action { get; set; }
+}
+
